@@ -954,8 +954,12 @@
                     votesHtml = '<div class="vote-list">';
                     req.votes.forEach(v => {
                         let color = '#fbbf24'; // pending
-                        if (v.status === 'Approved') color = '#10b981';
-                        if (v.status === 'Rejected') color = '#ef4444';
+                        // Revert to "Pending" for production feel
+                        // if (v.status === 'Pending') v.status = 'Waiting...'; 
+
+                        const statusLower = String(v.status).toLowerCase();
+                        if (statusLower === 'approved') color = '#10b981';
+                        if (statusLower === 'rejected') color = '#ef4444';
 
                         votesHtml += `
                             <div class="vote-item">
@@ -1010,6 +1014,5 @@
         });
     </script>
 </body>
-
 
 </html>
