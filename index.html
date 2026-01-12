@@ -94,6 +94,14 @@
             color: var(--text);
             cursor: pointer;
             letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
         }
 
         .nav-links {
@@ -463,7 +471,10 @@
 
     <!-- Navigation -->
     <nav>
-        <div class="logo">Request Form</div>
+        <div class="logo">
+            <img src="C:\Users\Sabarish\Desktop\APP\WhatsApp Image 2025-11-27 at 09.36.58_58ab60bb.jpg" alt="Logo">
+            Request Form
+        </div>
         <div class="nav-links">
             <button class="nav-btn active" data-target="home-section">Home</button>
             <button class="nav-btn" data-target="request-section">New Request</button>
@@ -477,7 +488,10 @@
         <!-- Home Section -->
         <section id="home-section" class="active">
             <div class="hero">
-                <h1>MASTERSCAN</h1>
+                <h2
+                    style="font-size: 1.5rem; letter-spacing: 3px; color: var(--text-muted); margin-bottom: 1rem; font-weight: 600;">
+                    WELCOME</h2>
+                <h1><span style="color: var(--secondary);">MASTER</span><span style="color: #ef4444;">SCAN</span></h1>
                 <p>Submit requests, track real-time status, and manage approvals efficiently. A powerful system built
                     for transparency and speed.</p>
                 <button class="cta-btn"
